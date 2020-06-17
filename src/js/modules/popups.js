@@ -1,7 +1,7 @@
 
-function popups(){
+const popups = () =>{
     let btnPressed = false;
-function bindPopup(triggerSelector, popupSelector, popupCloseSelector, destroyTrigger = true){
+function bindPopup(triggerSelector, popupSelector, popupCloseSelector, destroyTrigger = false){
     const trigger = document.querySelectorAll(triggerSelector),
       popup = document.querySelector(popupSelector),
       popupClose = document.querySelector(`${popupSelector} ${popupCloseSelector}`),
