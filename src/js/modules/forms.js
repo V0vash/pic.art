@@ -1,4 +1,3 @@
-// import checkNumInputs from "./checkNumInputs";
 import {postData} from "./services/services";
 
 function forms (){
@@ -18,8 +17,6 @@ function forms (){
               question: 'assets/question.php'
           };
 
-    // checkNumInputs(phoneInputs);
-
 
     const clearInputs = () => {
         inputs.forEach(item =>{
@@ -30,13 +27,10 @@ function forms (){
         });
     };
 
-    console.log(upload);
     upload.forEach((item) => {
         item.addEventListener('input', () =>{
-            console.log(item.files[0].name);
             let dots;
             const arr = item.files[0].name.split('.');
-            console.log(arr);
             arr[0].length > 6 ? dots = "..." : dots = '.';
             const name = arr[0].substring(0, 6) + dots + arr[1];
 
@@ -70,7 +64,6 @@ function forms (){
 
             let api;
             item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
-            console.log(api);
 
 
             postData(api, formData)
