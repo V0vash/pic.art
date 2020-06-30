@@ -4,6 +4,7 @@ import forms from './modules/forms';
 import checkTextInputs from './modules/checkTextInputs';
 import mask from './modules/mask';
 import addMoreStyles from './modules/addMoreStyles';
+import calc from './modules/calc';
 
 document.addEventListener('DOMContentLoaded', () => { 
     "use strict";
@@ -18,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     mask('[name="phone"]');
 
     addMoreStyles('.button-styles', '#styles .row');
+
+    calc('#size', '#material', '#options', '.promocode', '.calc-price');
+
+
     
     
 

@@ -61,9 +61,12 @@ function forms (){
             statusMessage.appendChild(statusText);
 
             const formData = new FormData(item);
+            if(item.classList.contains('calc-form')){
+                formData.append('price', document.querySelector('.calc-price').innerText);
+            } 
 
             let api;
-            item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
+            item.closest('.popup-design') || item.classList.contains('calc-form') ? api = path.designer : api = path.question;
 
 
             postData(api, formData)
