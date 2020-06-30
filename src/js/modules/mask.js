@@ -33,7 +33,6 @@ const mask = (selector) => {
         }
 
         let setCursorPosition = (pos, elem) =>{
-            console.log(pos);
             elem.focus();
 
             if (elem.setSelectionRange) {
