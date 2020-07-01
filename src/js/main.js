@@ -6,6 +6,7 @@ import mask from './modules/mask';
 import addMoreStyles from './modules/addMoreStyles';
 import calc from './modules/calc';
 import filter from './modules/filter';
+import pictureSize from './modules/pictureSize';
 
 document.addEventListener('DOMContentLoaded', () => { 
     "use strict";
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     calc('#size', '#material', '#options', '.promocode', '.calc-price');
 
     filter();
+
+    pictureSize('.sizes-block');
 
 
     
